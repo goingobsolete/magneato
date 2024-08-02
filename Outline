@@ -1,0 +1,5 @@
+bgimg = background image
+    GUI -> upload image
+cell = is a canvas Pgraphic one cell to be multiplied and contains the particle array this should be a WEBG object with several opaque to allow the particles to be drawn up to the surface
+    party = function for the particle array. also a Pgraphic WEBGL, contained by the cell. reacts to mouse position/etc
+        particle
