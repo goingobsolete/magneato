@@ -4,10 +4,12 @@ CANVAS SIZE: 1280 x 720
 
 bgimg = background image (this is hidden behind cell)
     
-cell = is a canvas Pgraphic one cell to be multiplied and contains the particle array this should be a WEBG object with several opaque to allow the particles to be drawn up to the surface
-    party = function for the particle array. also a Pgraphic WEBGL, contained by the cell. reacts to mouse position/etc - also rules for magnetism /flocking between 
-        particle = the particle should be a 3d object. possibly flat. variations from the base color size etc should be handled in party with modulo.
-        *OR* have it always draw from background image layer so like one pixel at the top of whatever shape represents the BG. So you change the bg to change the color.
+cell construction: a canvas Pgraphic one cell to be multiplied and contains the particle array this should be a WEBG object with several opaque to allow the particles to be drawn up to the surface
+    cellFrame: this essentially acts as a stroke inverted. so the arrangement of tiles depends on this larger shape. this allows the "stroke to only grow inwards by actually shrinking the canvas rather than adding more stroke.
+        cellCanvas:
+            party = function for the particle array. also a Pgraphic WEBGL, contained by the cell. reacts to mouse position/etc - also rules for magnetism /flocking between 
+                particle = the particle should be a 3d object. possibly flat. variations from the base color size etc should be handled in party with modulo.
+                    *OR* have it always draw from background image layer so like one pixel at the top of whatever shape represents the BG. So you change the bg to change the color.
 
 pen
     mouse pressed 
